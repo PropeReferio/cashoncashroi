@@ -13,7 +13,7 @@ class ROIForm(FlaskForm):
     util = StringField("Utilities", validators=[DataRequired()])
     hoa = StringField('HOA Fees', validators=[DataRequired()])
     lawnsnow = StringField('Lawn/Snow', validators=[DataRequired()])
-    vacancy = StringField('How much would you like to save each month to prepare \
+    vacancy = StringField('Monthly savings to prepare \
 for a vacancy?', validators=[DataRequired()])
     repairs = StringField('Repairs', validators=[DataRequired()])
     capex = StringField('Capex', validators=[DataRequired()])

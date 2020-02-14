@@ -31,6 +31,8 @@ def roi():
         income = sum([rent, other])
         expenses = sum([mortgage, tax, insur, util, hoa, lawnsnow, vacancy, repairs, capex, management])
         invest = sum([down, closing, maint, misc])
-        print(f"Your monthly cashflow is ${income - expenses}.")
-        print(f"Your annual cash on cash ROI is {(income - expenses) * 12 / invest * 100}%.")
     return render_template("roi.html", roiform = roiForm, expenses = expenses, invest = invest, income = income)
+
+@app.route("/about", methods=["GET"])
+def about():
+    return render_template("about.html")
