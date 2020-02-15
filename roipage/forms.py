@@ -14,7 +14,7 @@ class ROIForm(FlaskForm):
     hoa = StringField('HOA Fees', validators=[DataRequired()])
     lawnsnow = StringField('Lawn/Snow', validators=[DataRequired()])
     vacancy = StringField('Monthly savings to prepare \
-for a vacancy?', validators=[DataRequired()])
+for a vacancy', validators=[DataRequired()])
     repairs = StringField('Repairs', validators=[DataRequired()])
     capex = StringField('Capex', validators=[DataRequired()])
     management = StringField('Property Management', validators=[DataRequired()])
@@ -22,6 +22,6 @@ for a vacancy?', validators=[DataRequired()])
     down = StringField('Down Payment', validators=[DataRequired()])
     closing = StringField('Closing Costs', validators=[DataRequired()])
     maint = StringField('Initial maintenance', validators=[DataRequired()])
-    misc = StringField('Other miscellaneous costs', validators=[DataRequired()])
+    misc = StringField('Miscellaneous costs', validators=[DataRequired()])
 
     submit = SubmitField("Submit")

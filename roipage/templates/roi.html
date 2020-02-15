@@ -1,90 +1,92 @@
 {% extends 'base.html' %}
 {% block content %}
-{% if expenses %}
-<h2>Your monthly income is ${{ income }}, your monthly expenses are ${{ expenses }}</h2>
-
-<h2>Your monthly cashflow is ${{ income - expenses }}</h2>
-
-<h2>Your initial investment was ${{ invest }}</h2>
-
-<h2>Your cash on cash ROI is {{ (income - expenses) * 12 / invest * 100 }}%</h2>
-{% endif %}
 <h1>Calculate the cash on cash ROI of your
     real estate investment
 </h1>
+{% if expenses %}
+<div class="card">
+    <h2>Your cash on cash ROI is <span class="output">{{ roi }}%</span></h2>
+    <h4>Your monthly income is <span class="output">${{ income }}</span></h4> 
+    <h4>Your monthly expenses are <span class="output">${{ expenses }}</span></h4>
+    <h4>Your monthly cashflow is <span class="output">${{ income - expenses }}</span></h4>
+    <h4>Your initial investment was <span class="output">${{ invest }}</span></h4>
 
-<form action="", method="POST">
-    <h3>Monthly Income</h3>
-    <fieldset>
-        {{ roiform.rent.label }}
-        {{ roiform.rent(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.other.label }}
-        {{ roiform.other(class="form-control") }}
-    </fieldset>
-    <h3>Monthly Expenses</h3>
-    <fieldset>
-        {{ roiform.mortgage.label }}
-        {{ roiform.mortgage(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.tax.label }}
-        {{ roiform.tax(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.insur.label }}
-        {{ roiform.insur(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.util.label }}
-        {{ roiform.util(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.hoa.label }}
-        {{ roiform.hoa(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.lawnsnow.label }}
-        {{ roiform.lawnsnow(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.vacancy.label }}
-        {{ roiform.vacancy(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.repairs.label }}
-        {{ roiform.repairs(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.capex.label }}
-        {{ roiform.capex(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.management.label }}
-        {{ roiform.management(class="form-control") }}
-    </fieldset>
-    <h3>Initial Costs</h3>
-    <fieldset>
-        {{ roiform.down.label }}
-        {{ roiform.down(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.closing.label }}
-        {{ roiform.closing(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.maint.label }}
-        {{ roiform.maint(class="form-control") }}
-    </fieldset>
-    <fieldset>
-        {{ roiform.misc.label }}
-        {{ roiform.misc(class="form-control") }}
-    </fieldset>
-    {{ roiform.submit(class="button")}}
-</form>
+</div>
+{% endif %}
 
-<a href="/about">About the Calculator</a>
+<div class="card">
+    <form action="", method="POST">
+        <h3>Monthly Income</h3>
+        <fieldset>
+            {{ roiform.rent.label }}
+            {{ roiform.rent(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.other.label }}
+            {{ roiform.other(class="form-control") }}
+        </fieldset>
+        <h3>Monthly Expenses</h3>
+        <fieldset>
+            {{ roiform.mortgage.label }}
+            {{ roiform.mortgage(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.tax.label }}
+            {{ roiform.tax(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.insur.label }}
+            {{ roiform.insur(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.util.label }}
+            {{ roiform.util(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.hoa.label }}
+            {{ roiform.hoa(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.lawnsnow.label }}
+            {{ roiform.lawnsnow(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.vacancy.label }}
+            {{ roiform.vacancy(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.repairs.label }}
+            {{ roiform.repairs(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.capex.label }}
+            {{ roiform.capex(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.management.label }}
+            {{ roiform.management(class="form-control") }}
+        </fieldset>
+        <h3>Initial Costs</h3>
+        <fieldset>
+            {{ roiform.down.label }}
+            {{ roiform.down(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.closing.label }}
+            {{ roiform.closing(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.maint.label }}
+            {{ roiform.maint(class="form-control") }}
+        </fieldset>
+        <fieldset>
+            {{ roiform.misc.label }}
+            {{ roiform.misc(class="form-control") }}
+        </fieldset>
+        {{ roiform.submit(class="button")}}
+    </form>
+    <a href="/about">About the Calculator</a>
+</div>
 
 
 
