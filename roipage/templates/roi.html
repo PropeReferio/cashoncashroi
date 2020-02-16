@@ -1,91 +1,94 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Calculate the cash on cash ROI of your
+<h3 class="muted mycard text-center">Calculate the cash on cash ROI of your
     real estate investment
-</h1>
+</h3>
 {% if expenses %}
-<div class="card">
-    <h2>Your cash on cash ROI is <span class="output">{{ roi }}%</span></h2>
-    <h4>Your monthly income is <span class="output">${{ income }}</span></h4> 
-    <h4>Your monthly expenses are <span class="output">${{ expenses }}</span></h4>
-    <h4>Your monthly cashflow is <span class="output">${{ income - expenses }}</span></h4>
-    <h4>Your initial investment was <span class="output">${{ invest }}</span></h4>
+<div class="mycard">
+    <h2>Your cash on cash ROI is: <span class="income"><br>{{ roi }}%</span></h2>
+    <h4>Your monthly income is: <span class="income"><br>${{ income }}</span></h4> 
+    <h4>Your monthly expenses are: <span class="expense"><br>${{ expenses }}</span></h4>
+    <h4>Your monthly cashflow is: <span class="income"><br>${{ income - expenses }}</span></h4>
+    <h4>Your initial investment was: <span class="expense"><br>${{ invest }}</span></h4>
 
 </div>
 {% endif %}
 
-<div class="card">
+<div class="mycard">
     <form action="", method="POST">
-        <h3>Monthly Income</h3>
-        <fieldset>
+        <h3 class="col-md-7 col-sm-7">Monthly Income</h3>
+        <div class="row">
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.rent.label }}
             {{ roiform.rent(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.other.label }}
             {{ roiform.other(class="form-control") }}
         </fieldset>
-        <h3>Monthly Expenses</h3>
-        <fieldset>
+        <h3 class="col-md-7 col-sm-7">Monthly Expenses</h3>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.mortgage.label }}
             {{ roiform.mortgage(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.tax.label }}
             {{ roiform.tax(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.insur.label }}
             {{ roiform.insur(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.util.label }}
             {{ roiform.util(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.hoa.label }}
             {{ roiform.hoa(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.lawnsnow.label }}
             {{ roiform.lawnsnow(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.vacancy.label }}
             {{ roiform.vacancy(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.repairs.label }}
             {{ roiform.repairs(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.capex.label }}
             {{ roiform.capex(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.management.label }}
             {{ roiform.management(class="form-control") }}
         </fieldset>
-        <h3>Initial Costs</h3>
-        <fieldset>
+        <h3 class="col-md-7 col-sm-7">Initial Costs</h3>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.down.label }}
             {{ roiform.down(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.closing.label }}
             {{ roiform.closing(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.maint.label }}
             {{ roiform.maint(class="form-control") }}
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-6 col-sm-6">
             {{ roiform.misc.label }}
             {{ roiform.misc(class="form-control") }}
         </fieldset>
-        {{ roiform.submit(class="button")}}
+        {{ roiform.submit(class="button btn btn-success")}}
+        </div>
     </form>
-    <a href="/about">About the Calculator</a>
+    <a href="/about">
+        About the Calculator</a>
 </div>
 
 

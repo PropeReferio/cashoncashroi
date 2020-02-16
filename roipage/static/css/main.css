@@ -4,61 +4,32 @@ body{
     background-size: cover;
     background-color: #ccccff;
 }
-h1, h2, h4{
-    text-align: center;
-}
-a{
-    text-decoration: none; 
-    font-size: 1.1em;
-    margin-left: 85%;
-    margin-top: 1em;
-}
-p{
-    margin: 1em 6em 1em 6em;
-    text-align: center;
-    font-size: 1.3em;
-}
-.about{
-    margin-top: 2em;
-}
-iframe{
-    margin-left: 14%;
-}
-
-form{
-    font-size: 0.7em;
-    /* background-color: rgba(255, 255, 255, 0.8);
-    width: 80%; */
-    margin: 1em;
-}
-fieldset label{
-    display: block;
-}
-
-fieldset {
-    border: none;
-    display: inline;
-}
-.card{
+.mycard{
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 4px;
     width: 80%;
     margin: auto;
     margin-bottom: 2em;
+    margin-top: 1em;
     padding: 1em;
 }
-.vidcard{
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    width: 60%;
-    margin: auto;
-    margin-bottom: 2em;
-    padding: 1em;
+.button{
+    margin: 1em;
 }
-.output{
+label{
+    margin-top: 1em;
+}
+h3{
+    margin: 0.5em;
+    font-family: Garamond;
+}
+.income{
     color: green;
 }
-#submit{
-    width: 16em;
-    margin-left: 1em;
+.expense{
+    color: red;
+}
+.income, .expense{
+    font-weight: bold;
+    font-size: 1.3em;
 }
