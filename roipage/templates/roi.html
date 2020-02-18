@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h3 class="muted mycard text-center">Calculate the cash on cash ROI of your
+<h3 class="muted mycard text-center" id="header">Calculate the cash on cash ROI of your
     real estate investment
 </h3>
 {% if expenses %}
@@ -16,8 +16,8 @@
 
 <div class="mycard">
     <form action="", method="POST">
-        <h3 class="col-md-7 col-sm-7">Monthly Income</h3>
         <div class="row">
+        <h3 class="col-md-7 col-sm-7">Monthly Income</h3>
         <fieldset class="col-md-6 col-sm-6">
             {{ roiform.rent.label }}
             {{ roiform.rent(class="form-control") }}
